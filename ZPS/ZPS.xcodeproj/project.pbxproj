@@ -1,0 +1,556 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EE4051221FB3ECBF0054BC53 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4051211FB3ECBF0054BC53 /* AppDelegate.m */; };
+		EE4051251FB3ECBF0054BC53 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4051241FB3ECBF0054BC53 /* ViewController.m */; };
+		EE4051281FB3ECBF0054BC53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE4051261FB3ECBF0054BC53 /* Main.storyboard */; };
+		EE40512A1FB3ECBF0054BC53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE4051291FB3ECBF0054BC53 /* Assets.xcassets */; };
+		EE40512D1FB3ECBF0054BC53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE40512B1FB3ECBF0054BC53 /* LaunchScreen.storyboard */; };
+		EE4051301FB3ECBF0054BC53 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE40512F1FB3ECBF0054BC53 /* main.m */; };
+		EE4051421FB3EE370054BC53 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = EE40513F1FB3EE370054BC53 /* GCDAsyncSocket.m */; };
+		EE4051431FB3EE370054BC53 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4051411FB3EE370054BC53 /* GCDAsyncUdpSocket.m */; };
+		EE40514A1FB3F0470054BC53 /* ServerSocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4051491FB3F0470054BC53 /* ServerSocketManager.m */; };
+		EE40514E1FB4041A0054BC53 /* NSString+path.m in Sources */ = {isa = PBXBuildFile; fileRef = EE40514D1FB4041A0054BC53 /* NSString+path.m */; };
+		EE4051511FB404410054BC53 /* ServerSocketItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4051501FB404410054BC53 /* ServerSocketItem.m */; };
+		EE4051551FB43B770054BC53 /* ZPHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4051521FB43B760054BC53 /* ZPHomeCell.m */; };
+		EE4051561FB43B770054BC53 /* ZPHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE4051541FB43B770054BC53 /* ZPHomeCell.xib */; };
+		EE5CE20F1FB52FB9001F5A30 /* getgateway.c in Sources */ = {isa = PBXBuildFile; fileRef = EE5CE20A1FB52FB9001F5A30 /* getgateway.c */; };
+		EE5CE2101FB52FB9001F5A30 /* HJWifiUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5CE20D1FB52FB9001F5A30 /* HJWifiUtil.m */; };
+		EE5CE2391FB55651001F5A30 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5CE2381FB55651001F5A30 /* ImageViewController.m */; };
+		F2E15B4460F03A4EEE867D65 /* libPods-ZPS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95BFAECA09AF58978697F367 /* libPods-ZPS.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4B73FADC8DD1F938A4D1FFE1 /* Pods-ZPS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZPS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZPS/Pods-ZPS.debug.xcconfig"; sourceTree = "<group>"; };
+		5940A233C49715EBE6655192 /* Pods-ZPS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZPS.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZPS/Pods-ZPS.release.xcconfig"; sourceTree = "<group>"; };
+		95BFAECA09AF58978697F367 /* libPods-ZPS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZPS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE40511D1FB3ECBF0054BC53 /* ZPS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZPS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE4051201FB3ECBF0054BC53 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EE4051211FB3ECBF0054BC53 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EE4051231FB3ECBF0054BC53 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EE4051241FB3ECBF0054BC53 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EE4051271FB3ECBF0054BC53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EE4051291FB3ECBF0054BC53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EE40512C1FB3ECBF0054BC53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EE40512E1FB3ECBF0054BC53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE40512F1FB3ECBF0054BC53 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EE40513E1FB3EE370054BC53 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		EE40513F1FB3EE370054BC53 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		EE4051401FB3EE370054BC53 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
+		EE4051411FB3EE370054BC53 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
+		EE4051481FB3F0470054BC53 /* ServerSocketManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServerSocketManager.h; sourceTree = "<group>"; };
+		EE4051491FB3F0470054BC53 /* ServerSocketManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServerSocketManager.m; sourceTree = "<group>"; };
+		EE40514C1FB4041A0054BC53 /* NSString+path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+path.h"; sourceTree = "<group>"; };
+		EE40514D1FB4041A0054BC53 /* NSString+path.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+path.m"; sourceTree = "<group>"; };
+		EE40514F1FB404410054BC53 /* ServerSocketItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServerSocketItem.h; sourceTree = "<group>"; };
+		EE4051501FB404410054BC53 /* ServerSocketItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServerSocketItem.m; sourceTree = "<group>"; };
+		EE4051521FB43B760054BC53 /* ZPHomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPHomeCell.m; sourceTree = "<group>"; };
+		EE4051531FB43B760054BC53 /* ZPHomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPHomeCell.h; sourceTree = "<group>"; };
+		EE4051541FB43B770054BC53 /* ZPHomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZPHomeCell.xib; sourceTree = "<group>"; };
+		EE5CE20A1FB52FB9001F5A30 /* getgateway.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = getgateway.c; sourceTree = "<group>"; };
+		EE5CE20B1FB52FB9001F5A30 /* getgateway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getgateway.h; sourceTree = "<group>"; };
+		EE5CE20C1FB52FB9001F5A30 /* HJWifiUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJWifiUtil.h; sourceTree = "<group>"; };
+		EE5CE20D1FB52FB9001F5A30 /* HJWifiUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJWifiUtil.m; sourceTree = "<group>"; };
+		EE5CE20E1FB52FB9001F5A30 /* route.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = route.h; sourceTree = "<group>"; };
+		EE5CE2371FB55651001F5A30 /* ImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
+		EE5CE2381FB55651001F5A30 /* ImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE40511A1FB3ECBF0054BC53 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2E15B4460F03A4EEE867D65 /* libPods-ZPS.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		12B81904E516DC43E350BE37 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				95BFAECA09AF58978697F367 /* libPods-ZPS.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3A834414F90DF86C8A4A1410 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4B73FADC8DD1F938A4D1FFE1 /* Pods-ZPS.debug.xcconfig */,
+				5940A233C49715EBE6655192 /* Pods-ZPS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EE4051141FB3ECBF0054BC53 = {
+			isa = PBXGroup;
+			children = (
+				EE40511F1FB3ECBF0054BC53 /* ZPS */,
+				EE40511E1FB3ECBF0054BC53 /* Products */,
+				3A834414F90DF86C8A4A1410 /* Pods */,
+				12B81904E516DC43E350BE37 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EE40511E1FB3ECBF0054BC53 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE40511D1FB3ECBF0054BC53 /* ZPS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE40511F1FB3ECBF0054BC53 /* ZPS */ = {
+			isa = PBXGroup;
+			children = (
+				EE40513C1FB3EE0D0054BC53 /* Util */,
+				EE4051361FB3ED870054BC53 /* System */,
+				EE4051371FB3ED970054BC53 /* Class */,
+				EE40513B1FB3EDC70054BC53 /* resource */,
+			);
+			path = ZPS;
+			sourceTree = "<group>";
+		};
+		EE4051361FB3ED870054BC53 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				EE4051201FB3ECBF0054BC53 /* AppDelegate.h */,
+				EE4051211FB3ECBF0054BC53 /* AppDelegate.m */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		EE4051371FB3ED970054BC53 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				EE4051381FB3ED9E0054BC53 /* Controller */,
+				EE4051391FB3EDAA0054BC53 /* Model */,
+				EE40513A1FB3EDB20054BC53 /* View */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		EE4051381FB3ED9E0054BC53 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EE4051231FB3ECBF0054BC53 /* ViewController.h */,
+				EE4051241FB3ECBF0054BC53 /* ViewController.m */,
+				EE5CE2371FB55651001F5A30 /* ImageViewController.h */,
+				EE5CE2381FB55651001F5A30 /* ImageViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EE4051391FB3EDAA0054BC53 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EE40513A1FB3EDB20054BC53 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EE4051531FB43B760054BC53 /* ZPHomeCell.h */,
+				EE4051521FB43B760054BC53 /* ZPHomeCell.m */,
+				EE4051541FB43B770054BC53 /* ZPHomeCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EE40513B1FB3EDC70054BC53 /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				EE4051261FB3ECBF0054BC53 /* Main.storyboard */,
+				EE4051291FB3ECBF0054BC53 /* Assets.xcassets */,
+				EE40512B1FB3ECBF0054BC53 /* LaunchScreen.storyboard */,
+				EE40512E1FB3ECBF0054BC53 /* Info.plist */,
+				EE40512F1FB3ECBF0054BC53 /* main.m */,
+			);
+			path = resource;
+			sourceTree = "<group>";
+		};
+		EE40513C1FB3EE0D0054BC53 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				EE5CE2091FB52FB9001F5A30 /* wifi */,
+				EE40514B1FB403FD0054BC53 /* Category */,
+				EE4051441FB3EFAD0054BC53 /* SockManager */,
+				EE40513D1FB3EE370054BC53 /* CocoaAsyncSocket */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		EE40513D1FB3EE370054BC53 /* CocoaAsyncSocket */ = {
+			isa = PBXGroup;
+			children = (
+				EE40513E1FB3EE370054BC53 /* GCDAsyncSocket.h */,
+				EE40513F1FB3EE370054BC53 /* GCDAsyncSocket.m */,
+				EE4051401FB3EE370054BC53 /* GCDAsyncUdpSocket.h */,
+				EE4051411FB3EE370054BC53 /* GCDAsyncUdpSocket.m */,
+			);
+			path = CocoaAsyncSocket;
+			sourceTree = "<group>";
+		};
+		EE4051441FB3EFAD0054BC53 /* SockManager */ = {
+			isa = PBXGroup;
+			children = (
+				EE4051481FB3F0470054BC53 /* ServerSocketManager.h */,
+				EE4051491FB3F0470054BC53 /* ServerSocketManager.m */,
+				EE40514F1FB404410054BC53 /* ServerSocketItem.h */,
+				EE4051501FB404410054BC53 /* ServerSocketItem.m */,
+			);
+			path = SockManager;
+			sourceTree = "<group>";
+		};
+		EE40514B1FB403FD0054BC53 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				EE40514C1FB4041A0054BC53 /* NSString+path.h */,
+				EE40514D1FB4041A0054BC53 /* NSString+path.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		EE5CE2091FB52FB9001F5A30 /* wifi */ = {
+			isa = PBXGroup;
+			children = (
+				EE5CE20A1FB52FB9001F5A30 /* getgateway.c */,
+				EE5CE20B1FB52FB9001F5A30 /* getgateway.h */,
+				EE5CE20C1FB52FB9001F5A30 /* HJWifiUtil.h */,
+				EE5CE20D1FB52FB9001F5A30 /* HJWifiUtil.m */,
+				EE5CE20E1FB52FB9001F5A30 /* route.h */,
+			);
+			path = wifi;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE40511C1FB3ECBF0054BC53 /* ZPS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE4051331FB3ECBF0054BC53 /* Build configuration list for PBXNativeTarget "ZPS" */;
+			buildPhases = (
+				10DE97BD62A244F1A9AAAA4F /* [CP] Check Pods Manifest.lock */,
+				EE4051191FB3ECBF0054BC53 /* Sources */,
+				EE40511A1FB3ECBF0054BC53 /* Frameworks */,
+				EE40511B1FB3ECBF0054BC53 /* Resources */,
+				A4833045F4F0C0514AD98F50 /* [CP] Embed Pods Frameworks */,
+				FECE5E7E1360DA5140F153AD /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZPS;
+			productName = ZPS;
+			productReference = EE40511D1FB3ECBF0054BC53 /* ZPS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE4051151FB3ECBF0054BC53 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = baoqianli;
+				TargetAttributes = {
+					EE40511C1FB3ECBF0054BC53 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = EE4051181FB3ECBF0054BC53 /* Build configuration list for PBXProject "ZPS" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE4051141FB3ECBF0054BC53;
+			productRefGroup = EE40511E1FB3ECBF0054BC53 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE40511C1FB3ECBF0054BC53 /* ZPS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE40511B1FB3ECBF0054BC53 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE40512D1FB3ECBF0054BC53 /* LaunchScreen.storyboard in Resources */,
+				EE40512A1FB3ECBF0054BC53 /* Assets.xcassets in Resources */,
+				EE4051561FB43B770054BC53 /* ZPHomeCell.xib in Resources */,
+				EE4051281FB3ECBF0054BC53 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		10DE97BD62A244F1A9AAAA4F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A4833045F4F0C0514AD98F50 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZPS/Pods-ZPS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FECE5E7E1360DA5140F153AD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZPS/Pods-ZPS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE4051191FB3ECBF0054BC53 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE40514E1FB4041A0054BC53 /* NSString+path.m in Sources */,
+				EE4051421FB3EE370054BC53 /* GCDAsyncSocket.m in Sources */,
+				EE4051431FB3EE370054BC53 /* GCDAsyncUdpSocket.m in Sources */,
+				EE4051251FB3ECBF0054BC53 /* ViewController.m in Sources */,
+				EE5CE2101FB52FB9001F5A30 /* HJWifiUtil.m in Sources */,
+				EE4051511FB404410054BC53 /* ServerSocketItem.m in Sources */,
+				EE5CE2391FB55651001F5A30 /* ImageViewController.m in Sources */,
+				EE4051301FB3ECBF0054BC53 /* main.m in Sources */,
+				EE4051221FB3ECBF0054BC53 /* AppDelegate.m in Sources */,
+				EE5CE20F1FB52FB9001F5A30 /* getgateway.c in Sources */,
+				EE40514A1FB3F0470054BC53 /* ServerSocketManager.m in Sources */,
+				EE4051551FB43B770054BC53 /* ZPHomeCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EE4051261FB3ECBF0054BC53 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE4051271FB3ECBF0054BC53 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EE40512B1FB3ECBF0054BC53 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE40512C1FB3ECBF0054BC53 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EE4051311FB3ECBF0054BC53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EE4051321FB3ECBF0054BC53 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE4051341FB3ECBF0054BC53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B73FADC8DD1F938A4D1FFE1 /* Pods-ZPS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VR747BYW76;
+				INFOPLIST_FILE = "$(SRCROOT)/ZPS/resource/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.qianliyun.zhipingserver.ZPS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EE4051351FB3ECBF0054BC53 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5940A233C49715EBE6655192 /* Pods-ZPS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VR747BYW76;
+				INFOPLIST_FILE = "$(SRCROOT)/ZPS/resource/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.qianliyun.zhipingserver.ZPS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE4051181FB3ECBF0054BC53 /* Build configuration list for PBXProject "ZPS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE4051311FB3ECBF0054BC53 /* Debug */,
+				EE4051321FB3ECBF0054BC53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE4051331FB3ECBF0054BC53 /* Build configuration list for PBXNativeTarget "ZPS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE4051341FB3ECBF0054BC53 /* Debug */,
+				EE4051351FB3ECBF0054BC53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE4051151FB3ECBF0054BC53 /* Project object */;
+}

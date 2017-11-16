@@ -7,15 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-/*
- {
- "fileType" : 1,
- "fileName" : "IMG_2352.PNG",
- "id" : 0,
- "isCancel" : 0,
- "fileSize" : 1687105
- }
- */
+
+
+static NSString const*FILETYPEIMAGE = @"FILE_TYPE_IMAGE"; // 图片
+static NSString const*FILETYPEVIDEO = @"FILE_TYPE_VIDEO"; // 视频
+static NSString const*FILETYPEAUDIO = @"FILE_TYPE_AUDIO"; // 音频
+static NSString const*FILETYPETEXT  = @"FILE_TYPE_TEXT" ; // 文字
+
 @interface ServerSocketItem : NSObject
 /// 文件类型 1:图片 2:视频 3:音频 4:文字
 @property (nonatomic, assign) NSInteger fileType;

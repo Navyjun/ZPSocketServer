@@ -27,4 +27,18 @@
         return @"";
     }
 }
+
+//- (NSString *)filePath{
+//    if (self.fileType == 1) {
+//        return [NSString stringWithFormat:@"%@%@",FILETYPEIMAGE,_filePath];
+//    }else if (self.fileType == 2){
+//        return [NSString stringWithFormat:@"%@%@",FILETYPEVIDEO,_filePath];
+//    }else if (self.fileType == 3){
+//        return [NSString stringWithFormat:@"%@%@",FILETYPEVIDEO,_filePath];
+//    }else if (self.fileType == 4){
+//        return [NSString stringWithFormat:@"%@%@",FILETYPETEXT,_filePath];
+//    }else{
+//        return _filePath;
+//    }
+//}
 @end

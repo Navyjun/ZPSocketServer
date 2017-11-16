@@ -23,6 +23,7 @@
 		EE5CE20F1FB52FB9001F5A30 /* getgateway.c in Sources */ = {isa = PBXBuildFile; fileRef = EE5CE20A1FB52FB9001F5A30 /* getgateway.c */; };
 		EE5CE2101FB52FB9001F5A30 /* HJWifiUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5CE20D1FB52FB9001F5A30 /* HJWifiUtil.m */; };
 		EE5CE2391FB55651001F5A30 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5CE2381FB55651001F5A30 /* ImageViewController.m */; };
+		EE86840D1FBD62D50010B0C7 /* LocationFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE86840C1FBD62D50010B0C7 /* LocationFileViewController.m */; };
 		F2E15B4460F03A4EEE867D65 /* libPods-ZPS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95BFAECA09AF58978697F367 /* libPods-ZPS.a */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,8 @@
 		EE5CE20E1FB52FB9001F5A30 /* route.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = route.h; sourceTree = "<group>"; };
 		EE5CE2371FB55651001F5A30 /* ImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
 		EE5CE2381FB55651001F5A30 /* ImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
+		EE86840B1FBD62D50010B0C7 /* LocationFileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationFileViewController.h; sourceTree = "<group>"; };
+		EE86840C1FBD62D50010B0C7 /* LocationFileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationFileViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +149,8 @@
 				EE4051241FB3ECBF0054BC53 /* ViewController.m */,
 				EE5CE2371FB55651001F5A30 /* ImageViewController.h */,
 				EE5CE2381FB55651001F5A30 /* ImageViewController.m */,
+				EE86840B1FBD62D50010B0C7 /* LocationFileViewController.h */,
+				EE86840C1FBD62D50010B0C7 /* LocationFileViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -360,6 +365,7 @@
 				EE4051421FB3EE370054BC53 /* GCDAsyncSocket.m in Sources */,
 				EE4051431FB3EE370054BC53 /* GCDAsyncUdpSocket.m in Sources */,
 				EE4051251FB3ECBF0054BC53 /* ViewController.m in Sources */,
+				EE86840D1FBD62D50010B0C7 /* LocationFileViewController.m in Sources */,
 				EE5CE2101FB52FB9001F5A30 /* HJWifiUtil.m in Sources */,
 				EE4051511FB404410054BC53 /* ServerSocketItem.m in Sources */,
 				EE5CE2391FB55651001F5A30 /* ImageViewController.m in Sources */,

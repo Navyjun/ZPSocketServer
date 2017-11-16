@@ -39,12 +39,7 @@ ServerSocketManagerDelegate>
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    
     self.navigationItem.title = @"智屏";
-    
-//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"二维码" style:UIBarButtonItemStyleDone target:self action:@selector(rightItemDidClick)];
-//    self.navigationItem.rightBarButtonItem.enabled = NO;
     
     ServerSocketManager *serverM = [ServerSocketManager shareServerSocketManager];
     serverM.delegate = self;
@@ -64,7 +59,11 @@ ServerSocketManagerDelegate>
     myDirectoryEnumerator=  [fileManager enumeratorAtPath:strPath];
     while (strPath = [myDirectoryEnumerator nextObject]) {
         for (NSString * namePath in strPath.pathComponents) {
-            NSLog(@"-----AAA-----%@", namePath  );
+            NSLog(@"----AAAAA----%@/%@",serverM.dataSavePath,namePath);
+            NSString *path = [NSString stringWithFormat:@"%@/%@",serverM.dataSavePath,namePath];
+            UIImage *imge = [self getScreenShotImageFromVideoPath:path];
+            self.QRCodeImageView.image = imge;
+            self.QRCodeImageView.hidden = NO;
         }
     }
     
@@ -213,6 +212,22 @@ ServerSocketManagerDelegate>
     CGImageRelease(cgImage);
     
     return codeImage;
+}
+
+// 获取视频缩略图
+- (UIImage *)getScreenShotImageFromVideoPath:(NSString *)filePath{
+    UIImage *shotImage;
+    NSURL *fileURL = [NSURL fileURLWithPath:filePath];
+    AVURLAsset *asset = [[AVURLAsset alloc] initWithURL:fileURL options:nil];
+    AVAssetImageGenerator *gen = [[AVAssetImageGenerator alloc] initWithAsset:asset];
+    gen.appliesPreferredTrackTransform = YES;
+    CMTime time = CMTimeMakeWithSeconds(0.0, 600);
+    NSError *error = nil;
+    CMTime actualTime;
+    CGImageRef image = [gen copyCGImageAtTime:time actualTime:&actualTime error:&error];
+    shotImage = [[UIImage alloc] initWithCGImage:image];
+    CGImageRelease(image);
+    return shotImage;
 }
 
 @end

@@ -30,7 +30,9 @@ ServerSocketManagerDelegate>
 @property (nonatomic, weak) NSTimer *refreshTime;
 @property (weak, nonatomic) IBOutlet UITextField *portTextFiled;
 @property (weak, nonatomic) IBOutlet UILabel *acceptStateLabel;
-
+@property (weak, nonatomic) IBOutlet UIImageView *QRCodeImageView;
+/// 当前监听的端口
+@property (nonatomic, assign) NSInteger currentPort;
 @end
 
 @implementation ViewController
@@ -40,6 +42,9 @@ ServerSocketManagerDelegate>
     // Do any additional setup after loading the view, typically from a nib.
     
     self.navigationItem.title = @"智屏";
+    
+//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"二维码" style:UIBarButtonItemStyleDone target:self action:@selector(rightItemDidClick)];
+//    self.navigationItem.rightBarButtonItem.enabled = NO;
     
     ServerSocketManager *serverM = [ServerSocketManager shareServerSocketManager];
     serverM.delegate = self;
@@ -67,6 +72,8 @@ ServerSocketManagerDelegate>
     self.wifiStateLabel.text = [NSString stringWithFormat:@"当前连接wifi:%@",[HJWifiUtil fetchWiFiName]];
     // 定时器
     self.refreshTime = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(refreshWifiName) userInfo:nil repeats:YES];
+    
+    [self.view bringSubviewToFront:self.QRCodeImageView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -83,13 +90,35 @@ ServerSocketManagerDelegate>
 }
 - (IBAction)acceptPortButtonDidClick:(id)sender {
     NSString *portStr = self.portTextFiled.text;
+    self.currentPort = 0;
+    self.navigationItem.rightBarButtonItem.enabled = NO;
     if (portStr.length > 0) {
         [self.view endEditing:YES];
-        ServerSocketManager *manager = [ServerSocketManager shareServerSocketManager];
-        BOOL isSucces = [[ServerSocketManager shareServerSocketManager] startListenPort:portStr.intValue]; //67543
+        BOOL isSucces = [[ServerSocketManager shareServerSocketManager] startListenPort:portStr.intValue];
         self.acceptStateLabel.text = [NSString stringWithFormat:@"监听%@端口%@",self.portTextFiled.text,isSucces?@"成功":@"失败"];
-        NSLog(@"connectedHost:%@\nconnectedPort:%hu\nlocalHost:%@\nlocalPort:%hu",[manager connectedHost],[manager connectedPort],[manager localHost],[manager localPort]);
+        if (isSucces) {
+            self.currentPort = portStr.intValue;
+            [self rightItemDidClick];
+        }
     }
+}
+
+- (void)rightItemDidClick{
+    // {"ipAddress":"192.168.43.1","port":8059,"wifiName":"NX549J"}
+    NSMutableDictionary *infoDic = [NSMutableDictionary dictionary];
+    infoDic[@"ipAddress"] = [HJWifiUtil getLocalIPAddressForCurrentWiFi];
+    infoDic[@"port"] = [NSNumber numberWithInteger:self.currentPort];
+    infoDic[@"wifiName"] = [HJWifiUtil fetchWiFiName];
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:infoDic
+                                                       options:NSJSONWritingPrettyPrinted
+                                                         error:nil];
+    NSString *jsonStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    self.QRCodeImageView.image = [self imageQRCodeActionGenerate:jsonStr];
+    self.QRCodeImageView.hidden = NO;
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    self.QRCodeImageView.hidden = YES;
 }
 
 #pragma mark -
@@ -138,6 +167,52 @@ ServerSocketManagerDelegate>
     self.itemArray = fileList;
     NSLog(@"%zd",fileList.count);
     [self.tableView reloadData];
+}
+
+- (void)serverSocketManager:(ServerSocketManager *)server connect:(BOOL)isConnect connectIp:(NSString *)ip{
+    if (isConnect) {
+        self.QRCodeImageView.hidden = YES;
+        self.acceptStateLabel.text = [NSString stringWithFormat:@"%@-连接成功",ip];
+    }else{
+        self.acceptStateLabel.text = @"未连接";
+    }
+}
+
+#pragma mark -
+//生成二维码
+- (UIImage *)imageQRCodeActionGenerate:(NSString *)codess
+{
+    NSString *text = codess;
+    
+    NSData *stringData = [text dataUsingEncoding: NSUTF8StringEncoding];
+    
+    //生成
+    CIFilter *qrFilter = [CIFilter filterWithName:@"CIQRCodeGenerator"];
+    [qrFilter setValue:stringData forKey:@"inputMessage"];
+    [qrFilter setValue:@"M" forKey:@"inputCorrectionLevel"];
+    
+    UIColor *onColor = [UIColor blackColor];
+    UIColor *offColor = [UIColor whiteColor];
+    
+    //上色
+    CIFilter *colorFilter = [CIFilter filterWithName:@"CIFalseColor" keysAndValues:@"inputImage",qrFilter.outputImage,@"inputColor0",[CIColor colorWithCGColor:onColor.CGColor],@"inputColor1",[CIColor colorWithCGColor:offColor.CGColor],nil];
+    
+    CIImage *qrImage = colorFilter.outputImage;
+    
+    //绘制
+    CGSize size = CGSizeMake(200, 200);
+    CGImageRef cgImage = [[CIContext contextWithOptions:nil] createCGImage:qrImage fromRect:qrImage.extent];
+    UIGraphicsBeginImageContext(size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetInterpolationQuality(context, kCGInterpolationNone);
+    CGContextScaleCTM(context, 1.0, -1.0);
+    CGContextDrawImage(context, CGContextGetClipBoundingBox(context), cgImage);
+    UIImage *codeImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    CGImageRelease(cgImage);
+    
+    return codeImage;
 }
 
 @end

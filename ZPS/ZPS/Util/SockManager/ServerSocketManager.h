@@ -20,7 +20,8 @@
 - (void)serverSocketManager:(ServerSocketManager *)server fileHeadAccept:(ServerSocketItem *)item;
 // 文件正在接受时进度的回调
 - (void)serverSocketManager:(ServerSocketManager *)server fileAccepting:(ServerSocketItem *)item;
-
+// 连接状态 连接成功 / 断开 时回调
+- (void)serverSocketManager:(ServerSocketManager *)server connect:(BOOL)isConnect connectIp:(NSString *)ip;
 @end
 
 

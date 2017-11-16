@@ -101,6 +101,9 @@ static ServerSocketManager *socketManager = nil;
     }
     [self.clientSocketArray addObject:newSocket];
     [newSocket readDataWithTimeout:- 1 tag:0];
+    if ([self.delegate respondsToSelector:@selector(serverSocketManager:connect:connectIp:)]) {
+        [self.delegate serverSocketManager:self connect:YES connectIp:newSocket.connectedHost];
+    }
 }
 
 /// 客户端连接到的
@@ -187,7 +190,10 @@ static ServerSocketManager *socketManager = nil;
 
 /// 断开连接
 - (void)socketDidDisconnect:(GCDAsyncSocket *)sock withError:(NSError *)err{
-    NSLog(@"%s",__func__);
+    NSLog(@"%s - err=%@",__func__,err.localizedDescription);
+    if ([self.delegate respondsToSelector:@selector(serverSocketManager:connect:connectIp:)]) {
+        [self.delegate serverSocketManager:self connect:NO connectIp:nil];
+    }
 }
 
 ///
